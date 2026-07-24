@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammad Sharjil Khan | AI Evaluation & Quality Portfolio</title>
+    <style>
+        :root {
+            --primary: #1a73e8;
+            --dark: #202124;
+            --light-bg: #f8f9fa;
+            --border: #dadce0;
+            --success: #137333;
+            --danger: #c5221f;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+        header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        h1 { margin: 0; color: var(--dark); font-size: 28px; }
+        .subtitle { font-size: 16px; color: #5f6368; margin-top: 5px; }
+        .tag-container { margin-top: 10px; }
+        .tag {
+            display: inline-block;
+            background: #e8f0fe;
+            color: var(--primary);
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        .section {
+            background: var(--light-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+        h2 { font-size: 20px; color: var(--primary); margin-top: 0; }
+        .prompt-box {
+            background: #eef3fc;
+            border-left: 4px solid var(--primary);
+            padding: 12px 16px;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: #fff;
+        }
+        th, td {
+            border: 1px solid var(--border);
+            padding: 10px 12px;
+            text-align: left;
+            font-size: 14px;
+        }
+        th { background-color: #f1f3f4; }
+        .pass { color: var(--success); font-weight: bold; }
+        .fail { color: var(--danger); font-weight: bold; }
+        .rationale {
+            background: #fff;
+            border: 1px solid var(--border);
+            padding: 15px;
+            border-radius: 6px;
+        }
+        footer {
+            text-align: center;
+            font-size: 12px;
+            color: #70757a;
+            margin-top: 40px;
+            border-top: 1px solid var(--border);
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Mohammad Sharjil Khan</h1>
+    <div class="subtitle">AI Training Specialist & Prompt Evaluation Benchmark Portfolio</div>
+    <div class="tag-container">
+        <span class="tag">RLHF Evaluation</span>
+        <span class="tag">Fact Verification</span>
+        <span class="tag">Constraint Stress Testing</span>
+        <span class="tag">Data Annotation</span>
+    </div>
+</header>
+
+<div class="section">
+    <h2>Project Summary & Methodology</h2>
+    <p>This benchmark portfolio showcases rigorous, evidence-based evaluation of frontier Large Language Models (LLMs). The testing methodology evaluates model outputs against <strong>Instruction Following</strong>, <strong>Factual Accuracy</strong>, <strong>Negative Constraints</strong>, and <strong>Tone Adaptation</strong>—directly mirroring RLHF and AI annotation frameworks used by major AI training platforms.</p>
+</div>
+
+<div class="section">
+    <h2>Benchmark Case Study: Multi-Constraint Prompt Testing</h2>
+    
+    <h3>1. Target Test Prompt</h3>
+    <div class="prompt-box">
+        "Summarize the working mechanism of photosynthesis for a middle school student. 
+        <br><strong>Constraints:</strong> 
+        1) Exactly 3 bullet points. 
+        2) Total length must be strictly between 50 and 70 words. 
+        3) Do NOT use the words 'plant', 'green', or 'sunlight'. 
+        4) Each bullet must begin with a active verb."
+    </div>
+
+    <h3>2. Side-by-Side Model Outputs</h3>
+    <table>
+        <tr>
+            <th width="50%">Model A Output</th>
+            <th width="50%">Model B Output</th>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <li><strong>Absorbs</strong> water through root systems and draws carbon dioxide gas from surrounding air.</li>
+                    <li><strong>Converts</strong> captured light energy into chemical energy stored in sugar molecules called glucose.</li>
+                    <li><strong>Releases</strong> fresh oxygen back into the atmosphere as a natural byproduct of energy production.</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li><strong>Captures</strong> bright light rays inside specialized leaf cells to start energy production.</li>
+                    <li><strong>Combines</strong> water and carbon dioxide to manufacture nutritious sugars for survival and growth.</li>
+                    <li><strong>Outputs</strong> oxygen gas as an essential byproduct that other living organisms breathe.</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <h3>3. Evaluator Grading Rubric</h3>
+    <table>
+        <tr>
+            <th>Evaluation Criteria</th>
+            <th>Model A Status</th>
+            <th>Model B Status</th>
+            <th>Evaluator Notes</th>
+        </tr>
+        <tr>
+            <td><strong>Negative Constraints</strong> (No forbidden words)</td>
+            <td><span class="pass">PASS</span></td>
+            <td><span class="pass">PASS</span></td>
+            <td>Neither model used 'plant', 'green', or 'sunlight'.</td>
+        </tr>
+        <tr>
+            <td><strong>Word Count Compliance</strong> (50–70 words)</td>
+            <td><span class="pass">PASS</span> (51 Words)</td>
+            <td><span class="fail">FAIL</span> (44 Words)</td>
+            <td>Model A hit 51 words. Model B failed by generating only 44 words.</td>
+        </tr>
+        <tr>
+            <td><strong>Structural Constraints</strong> (3 bullets / Action verbs)</td>
+            <td><span class="pass">PASS</span></td>
+            <td><span class="pass">PASS</span></td>
+            <td>Both models started each bullet with action verbs (Absorbs, Converts, Releases).</td>
+        </tr>
+        <tr>
+            <td><strong>Factuality & Tone Adaptation</strong></td>
+            <td><span class="pass">PASS</span></td>
+            <td><span class="pass">PASS</span></td>
+            <td>Both models accurately explained the biochemical process for a middle-school level.</td>
+        </tr>
+    </table>
+
+    <h3>4. Final Verdict & Justification</h3>
+    <div class="rationale">
+        <p><strong>Winner: Model A</strong></p>
+        <p><strong>Justification Rationale:</strong> Model A is strictly superior due to 100% adherence to all positive and negative constraints. Model B failed Constraint #2 by falling below the required length threshold (generating 44 words against the mandatory 50–70 range). Both models correctly navigated negative constraints without sacrificing scientific accuracy, but Model A demonstrated superior precise length control while maintaining an accessible tone for middle school readers.</p>
+    </div>
+</div>
+
+<footer>
+    Prepared by <strong>Mohammad Sharjil Khan</strong> | AI Evaluation Portfolio | Available for Remote AI Data Annotation & Evaluation Roles
+</footer>
+
+</body>
+</html>
